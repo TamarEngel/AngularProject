@@ -1,0 +1,12 @@
+
+<div class="form-style">
+    Id:<input #id type="number" [value]="currentStudent?.Id"><br>
+    Name:<input #name type="text" [value]="currentStudent?.Name"><br>
+    Active:<input #active type="text" [value]="currentStudent?.Active"><br>
+    @if(currentStudent?.Active){
+        Date: {{currentStudent?.d}}<br>
+    }
+</div>
+<br>
+<button (click)="saveStd(id.valueAsNumber, name.value, active.value)">Save</button>
+<br>

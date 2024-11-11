@@ -1,0 +1,15 @@
+
+@for (std of currentStudentList; track $index) {
+    {{std.Id}},{{std.Name}}, {{std.Active}}
+    <br>
+    <button (click)="editStudent(std)">Edit</button>
+    @if(std.flag){
+        <app-student-details [currentStudent]="std" (saveStudent)="ParentSave($event)"></app-student-details>
+    }
+    <br>  
+}
+<br>
+<button (click)="AddStudent()">Add student</button>
+@if(addStd==true){
+    <app-student-details (saveStudent)="ParentSave($event)"></app-student-details>
+}
