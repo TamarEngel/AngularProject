@@ -1,32 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, viewChild } from '@angular/core';
 import { StudentDetailsComponent } from '../student-details/student-details.component';
 import { Student } from '../../models/student ';
+import { InfromationPopupComponent } from '../infromation-popup/infromation-popup.component';
+
 
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [StudentDetailsComponent],
+  imports: [StudentDetailsComponent,InfromationPopupComponent],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.css'
 })
 export class StudentListComponent {
-  addStd:boolean=false
-  // isEditing: boolean = false
+  addStd:boolean=false;
+  @ViewChild(InfromationPopupComponent) child!:InfromationPopupComponent;
   newstudent: Student = new Student(0, "",false,false);
   currentStudentList: Student[] = [
     new Student(1, " Tamar ",true, false, new Date(1, 12, 2024)),
     new Student(2, " Ahuvi ", true,false, new Date(1, 12, 2024)),
     new Student(1, " Rut ",false, false, new Date(1, 12, 2024))
   ]
-  editStudent(std:Student){
+  EditStudent(std:Student){
     std.flag=true
-    // this.isEditing=true
   }
   AddStudent(){
     this.addStd=true
   }
   ParentSave(std: Student){
     this.currentStudentList.push(std)
-    // this.isEditing = false
+  }
+  DeleteStudent(){
+      this.child.showPopup('?האם אתה בטוח שברצונך למחוק תלמיד זה')
   }
 }
