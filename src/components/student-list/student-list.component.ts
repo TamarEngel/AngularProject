@@ -2,12 +2,12 @@ import { Component, ElementRef, ViewChild, viewChild } from '@angular/core';
 import { StudentDetailsComponent } from '../student-details/student-details.component';
 import { Student } from '../../models/student ';
 import { InfromationPopupComponent } from '../infromation-popup/infromation-popup.component';
-
+import { NgTemplateOutlet } from '@angular/common'; 
 
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [StudentDetailsComponent,InfromationPopupComponent],
+  imports: [StudentDetailsComponent,InfromationPopupComponent,NgTemplateOutlet],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.css'
 })
