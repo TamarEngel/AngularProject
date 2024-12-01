@@ -12,11 +12,14 @@ import { json } from 'stream/consumers';
 export class StudentDetailsComponent {
   @Input() currentStudent!: Student | null;
   @Output() saveStudent: EventEmitter<any> = new EventEmitter<any>();
+  @Output() outputStudent: EventEmitter<any> = new EventEmitter<any>();
 
   saveStd(id:number,name:string,active:string){
-    this.saveStudent.emit(new Student(id,name,JSON.parse(active),false))
+    this.saveStudent.emit(new Student(id,name,JSON.parse(active),false,false,false))
   }
 }
+
+
 
 
 

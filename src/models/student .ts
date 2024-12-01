@@ -4,7 +4,9 @@ export class Student {
         public Id: number,
         public Name: string,
         public Active:boolean,
-        public flag:boolean,
+        public flagForEdit:boolean,
+        public flagForList:boolean,
+        public paid:boolean,
         public d?:Date
     ) { }
     

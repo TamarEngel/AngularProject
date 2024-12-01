@@ -1,0 +1,14 @@
+@for (course of courses; track $index) {
+    @if (currentStd.paid) {
+        <div appColorBtn [courseType]="course.IdCourse" style="width: 16%;">
+            {{course.IdCourse}} == {{course.NameCourse}} == {{course.Subject}}
+        </div>
+    }
+    @else{
+        <div appColorBtn [courseType]="course.IdCourse" style="width: 15%;">
+            {{course.IdCourse}} -- {{course.NameCourse}} -- {{course.Subject}}
+        </div>
+    }
+    <br>
+
+}

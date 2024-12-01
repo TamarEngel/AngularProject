@@ -6,16 +6,32 @@
         <br>
         <button (click)="EditStudent(std)">Edit</button>
         <button (click)="DeleteStudent()">Delete</button>
+        <button (click)="showListCourses(std)">To the list of courses</button>
         <app-infromation-popup></app-infromation-popup>
-        @if(std.flag){
+        @if(std.flagForEdit){
             <app-student-details [currentStudent]="std" (saveStudent)="ParentSave($event)"></app-student-details>
+            <button (click)="closeStudent(std)">close</button>
+            <br>
         }
-        <br>  
+        <br>
+        @if(std.flagForList){
+            <app-course-list [currentStd]="std"></app-course-list>
+            <br>
+            <button (click)="closeListCourses(std)">close</button>
+            <br>
+            <br>
+        }
+        
     }
 </ng-template>
 <p>----------רשימת התלמידות-----------</p>
 <br>
 <button (click)="AddStudent()">Add student</button>
 @if(addStd==true){
-    <app-student-details (saveStudent)="ParentSave($event)"></app-student-details>
+<app-student-details (saveStudent)="ParentSave($event)"></app-student-details>
 }
+
+
+
+
+
