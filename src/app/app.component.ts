@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { StudentListComponent } from '../components/student-list/student-list.component';
-
+import { TemplateDrivenFormComponent } from "../components/template-driven-form/template-driven-form.component";
+import { TextToIconPipe } from "../pipes/text-to-icon.pipe";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [StudentListComponent],
+  imports: [StudentListComponent, TemplateDrivenFormComponent, TextToIconPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

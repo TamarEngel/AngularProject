@@ -27,6 +27,7 @@
 <p>----------רשימת התלמידות-----------</p>
 <br>
 <button (click)="AddStudent()">Add student</button>
+<br>
 @if(addStd==true){
 <app-student-details (saveStudent)="ParentSave($event)"></app-student-details>
 }
