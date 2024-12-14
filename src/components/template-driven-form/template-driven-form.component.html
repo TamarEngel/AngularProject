@@ -1,7 +1,13 @@
 <form (ngSubmit)="onSubmit()">
     <div>
         <label for="name">Teacher Name:</label>
-        <input id="name" [(ngModel)]="teacher.Name" name="name" required>
+        <input id="name" [(ngModel)]="teacher.Name" name="name" #userName1="ngModel" required minlength="3" >
+        @if(userName1.touched && userName1.hasError('required')){
+        <small class="error-invalid">name is required.</small>
+        }
+        @if(userName1.hasError('minlength')){
+        <small class="error-invalid">Name must be at least 3 characters long.</small>
+        }
     </div>
     <div>
         <label for="ID">ID:</label>
@@ -9,7 +15,13 @@
     </div>
     <div>
         <label for="classList1">classList:</label>
-        <input id="classList1" [(ngModel)]="teacher.Class" name="classList1" required>
+        <input id="classList1" [(ngModel)]="teacher.Class" #class1="ngModel" name="classList1" required minlength="5">
+        @if (class1.touched && class1.hasError('required') ) {
+            <small class="error-invalid">Class field is required</small>
+        }
+        @if (class1.hasError('minlength')) {
+            <small class="error-invalid" >You must teach at least 2 classes</small>   
+        }
     </div>
     <button type="submit">save</button>
 </form>
