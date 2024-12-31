@@ -1,6 +1,63 @@
-.form-style{
-    width: 250px;
+
+/* עיצוב עבור טופס המידע על הסטודנט */
+.form-style {
+    background-color: #fff;
     padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid;
-}
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* עיצוב כל שדה בתוך הטופס */
+  .form-style label {
+    font-size: 1.1em;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .form-style input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  
+  /* עיצוב כשיש שדה פעיל */
+  .form-style input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* עיצוב עבור כפתור השמירה */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    margin: 10px;
+    margin-left: 40%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* עיצוב לספאן של תאריך אם קיים */
+  .form-style span {
+    font-size: 1.1em;
+    color: #555;
+  }
+  

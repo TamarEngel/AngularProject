@@ -1,8 +1,19 @@
-{{currentHour()}}<br>
-{{title}}<br>
-<p>{{ 'smile heart star sad' | textToIcon }}</p>
+<div class="container">
+  <header class="header">
+    <h1>{{currentHour()}}</h1>
+    <h2>{{title}}</h2>
+  </header>
 
-<app-student-list></app-student-list>
-<br>
-<p>{{ "------Teacher form-------" }}</p>
-<app-template-driven-form></app-template-driven-form>
+  <section class="welcome-message">
+    <p>{{ 'Welcome! smile '| textToIcon }}</p>
+  </section>
+
+  <nav class="navigation">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/studentList" routerLinkActive="active">Student List</a>
+    <a routerLink="/teacherForm" routerLinkActive="active">Teacher Form</a>
+    <a routerLink="/classForm" routerLinkActive="active">Class Form</a>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

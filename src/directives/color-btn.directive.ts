@@ -18,13 +18,13 @@ export class ColorBtnDirective {
 
     switch (this.courseType) {
       case 1:
-        color = 'lightblue';
+        color = 'green';
         break;
       case 2:
-        color = 'red';
+        color = '#00bcd4';
         break;
       case 3:
-        color = 'pink';
+        color = 'lightblue';
         break;
       default:
         color = 'gray';

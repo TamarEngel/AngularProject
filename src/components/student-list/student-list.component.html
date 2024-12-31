@@ -1,4 +1,42 @@
+
 <p>----------רשימת התלמידות-----------</p>
+<ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+
+<ng-template #myTemplate>
+    @for (std of currentStudentList; track $index) {
+    <div class="student-list">
+        <p>{{std.Id}}, {{std.Name}}, {{std.Active}}</p>
+        <button (click)="EditStudent(std)">Edit</button>
+        <button (click)="DeleteStudent()">Delete</button>
+        <button (click)="showListCourses(std)">To the list of courses</button>
+        <app-infromation-popup></app-infromation-popup>
+        @if(std.flagForEdit){
+        <app-student-details [currentStudent]="std" (saveStudent)="ParentSave($event)"></app-student-details>
+        <button (click)="closeStudent(std)">close</button>
+        <br>
+        }
+        @if(std.flagForList){
+        <app-course-list [currentStd]="std"></app-course-list>
+        <br>
+        <button (click)="closeListCourses(std)">close</button>
+        <br>
+        }
+    </div>
+    }
+</ng-template>
+
+
+<p>----------רשימת התלמידות-----------</p>
+<br>
+
+<button class="add-student-btn" (click)="AddStudent()">Add student</button>
+<br>
+
+@if(addStd==true){
+<app-student-details (saveStudent)="ParentSave($event)"></app-student-details>
+}
+
+<!-- <p>----------רשימת התלמידות-----------</p>
 <ng-container *ngTemplateOutlet="myTemplate"></ng-container>
 <ng-template #myTemplate>
     @for (std of currentStudentList; track $index) {
@@ -30,9 +68,4 @@
 <br>
 @if(addStd==true){
 <app-student-details (saveStudent)="ParentSave($event)"></app-student-details>
-}
-
-
-
-
-
+} -->

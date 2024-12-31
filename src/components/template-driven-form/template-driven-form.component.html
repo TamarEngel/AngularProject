@@ -1,37 +1,46 @@
-<form (ngSubmit)="onSubmit()">
-    <div>
-        <label for="name">Teacher Name:</label>
-        <input id="name" [(ngModel)]="teacher.Name" name="name" #userName1="ngModel" required minlength="3" >
-        @if(userName1.touched && userName1.hasError('required')){
-        <small class="error-invalid">name is required.</small>
-        }
-        @if(userName1.hasError('minlength')){
-        <small class="error-invalid">Name must be at least 3 characters long.</small>
-        }
-    </div>
-    <div>
-        <label for="ID">ID:</label>
-        <input id="ID" [(ngModel)]="teacher.Id" name="ID">
-    </div>
-    <div>
-        <label for="classList1">classList:</label>
-        <input id="classList1" [(ngModel)]="teacher.Class" #class1="ngModel" name="classList1" required minlength="5">
-        @if (class1.touched && class1.hasError('required') ) {
-            <small class="error-invalid">Class field is required</small>
-        }
-        @if (class1.hasError('minlength')) {
-            <small class="error-invalid" >You must teach at least 2 classes</small>   
-        }
-    </div>
-    <button type="submit">save</button>
-</form>
 
 
+<div class="container">
+    <header class="header">
+        <h1>Teacher Form</h1>
+    </header>
 
-<br>
-<br>
-<div>--------Teachers-List-------</div>
-@for (item of TeacherList; track item) {
-{{item.Id}} - {{item.Name}} -- {{item.Class}}
-<br>
-}
+    <section class="form-container">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">Teacher Name:</label>
+                <input id="name" [(ngModel)]="teacher.Name" name="name" #userName1="ngModel" required minlength="3">
+                @if(userName1.touched && userName1.hasError('required')){
+                <small class="error-invalid">name is required.</small>
+                }
+                @if(userName1.hasError('minlength')){
+                <small class="error-invalid">Name must be at least 3 characters long.</small>
+                }
+            </div>
+            <div class="form-group">
+                <label for="ID">Teacher ID:</label>
+                <input id="ID" [(ngModel)]="teacher.Id" name="ID">
+            </div>
+
+            <div class="form-group">
+                <label for="classList1">Class List:</label>
+                <input id="classList1" [(ngModel)]="teacher.Class" #class1="ngModel" name="classList1" required
+                    minlength="5">
+                @if (class1.touched && class1.hasError('required') ) {
+                <small class="error-invalid">Class field is required</small>
+                }
+                @if (class1.hasError('minlength')) {
+                <small class="error-invalid">You must teach at least 2 classes</small>
+                }
+            </div>
+            <button type="submit">Save</button>
+        </form>
+    </section>
+
+    <section class="teachers-list">
+        <h3>Teachers List</h3>
+        @for (item of TeacherList; track item) {
+            <p>{{ item.Id }} - {{ item.Name }} -- {{ item.Class }}</p>
+        }
+    </section>
+</div>

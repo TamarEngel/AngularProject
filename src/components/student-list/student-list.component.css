@@ -1,0 +1,71 @@
+/* עיצוב הכללי של העמוד */
+p {
+    text-align: center;
+    font-size: 1.4em; 
+    color: #333;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* גופן יפה ומודרני */
+    margin-bottom: 20px; 
+  }
+  
+  /* עיצוב עבור כפתורים */
+  button {
+    background-color: white; /* תכלת בהיר */
+    color:black;
+    padding: 10px 20px; 
+    margin: 5px; /* רווח בין הכפתורים */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em; 
+    font-family: 'Roboto', sans-serif; /* גופן יפה ומודרני */
+    display: inline-block;
+  }
+  
+  button:hover {
+    background-color: #7fc9d1; /* תכלת כהה יותר */
+  }
+  
+  button:active {
+    background-color: #0097a7; /* תכלת כהה בעת לחיצה */
+  }
+  
+  /* עיצוב עבור כפתור הוספת תלמיד */
+  .add-student-btn {
+    background-color: #46d7e7; 
+    font-size: 1.2em; 
+    padding: 12px 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .add-student-btn:hover {
+    background-color:white; /* תכלת כהה יותר */
+  }
+  
+  /* עיצוב עבור הרשימה */
+  .student-list {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0; /* אפור בהיר */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em; 
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* עיצוב עבור כפתור בתוך ה-template */
+  .student-list button {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+  }
+
+
+  

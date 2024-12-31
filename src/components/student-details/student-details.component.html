@@ -1,5 +1,5 @@
 
-<div class="form-style">
+<!-- <div class="form-style">
     Id:<input #id type="number" [value]="currentStudent?.Id"><br>
     Name:<input #name type="text" [value]="currentStudent?.Name"><br>
     Active:<input #active type="text" [value]="currentStudent?.Active"><br>
@@ -8,4 +8,19 @@
     }
 </div>
 <br>
-<button (click)="saveStd(id.valueAsNumber, name.value, active.value)">Save</button>
+<button (click)="saveStd(id.valueAsNumber, name.value, active.value)">Save</button> -->
+<div class="form-style">
+    <label for="id">Id:</label>
+    <input id="id" #id type="number" [value]="currentStudent?.Id"><br>
+  
+    <label for="name">Name:</label>
+    <input id="name" #name type="text" [value]="currentStudent?.Name"><br>
+  
+    <label for="active">Active:</label>
+    <input id="active" #active type="text" [value]="currentStudent?.Active"><br>
+    @if(currentStudent?.Active){
+        <span>Date: {{currentStudent?.d}}</span><br>
+    }
+  </div>
+  
+  <button (click)="saveStd(id.valueAsNumber, name.value, active.value)">Save</button>
