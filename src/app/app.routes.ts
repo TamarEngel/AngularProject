@@ -4,10 +4,12 @@ import { TemplateDrivenFormComponent } from '../components/template-driven-form/
 import { AppComponent } from './app.component';
 import { MenuComponent } from '../components/menu/menu.component';
 import { ReactiveFormClassComponent } from '../components/reactive-form-class/reactive-form-class.component';
+import { AvailableCoursesComponent } from '../components/available-courses/available-courses.component';
 
 export const routes: Routes = [
     { path: '', component:MenuComponent },
     { path: 'studentList', component:StudentListComponent},
     { path: 'teacherForm', component:TemplateDrivenFormComponent},
     { path: 'classForm', component:ReactiveFormClassComponent},
+    { path: 'availableCourses', component:AvailableCoursesComponent},
 ];

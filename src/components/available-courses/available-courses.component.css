@@ -1,0 +1,74 @@
+.course-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3f51b5;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .example-tree {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .leaf-node {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .example-tree .mat-nested-tree-node div[role=group] {
+    padding-left: 40px;
+  }
+  .example-tree div[role=group] > .mat-tree-node {
+    padding-left: 40px;
+  }
+
+  .expandable-node {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    font-weight: bold;
+  }
+  
+  .node-icon {
+    margin-right: 8px;
+    color: #607d8b;
+  }
+  
+  .node-name {
+    font-size: 16px;
+    color: #424242;
+  }
+  
+  .toggle-icon {
+    color: #3f51b5;
+  }
+  
+  .highlight-course {
+    color: #e81935;
+  }
+  
+  .note {
+    font-size: 14px;
+    color: #757575;
+    margin-top: 16px;
+    text-align: center;
+  }
+  .example-tree-invisible {
+    display: none;
+  }
+  mat-icon {
+    color: #d40012;  
+    font-size: 16px; 
+  }
