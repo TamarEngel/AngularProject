@@ -1,0 +1,8 @@
+@for(e of (ticketService.ticket$| async); track e.Id){
+    <div class="ticket-container">
+        <pre class="json-display">{{ e | json }}</pre>
+      </div>
+}
+@empty{
+    <div class="loading-message">אנחנו עובדים בשבילך...</div>
+}

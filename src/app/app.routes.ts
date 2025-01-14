@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from '../components/menu/menu.component';
 import { ReactiveFormClassComponent } from '../components/reactive-form-class/reactive-form-class.component';
 import { AvailableCoursesComponent } from '../components/available-courses/available-courses.component';
+import { TicketHttpComponent } from '../components/ticket-http/ticket-http.component';
 
 export const routes: Routes = [
     { path: '', component:MenuComponent },
@@ -12,4 +13,6 @@ export const routes: Routes = [
     { path: 'teacherForm', component:TemplateDrivenFormComponent},
     { path: 'classForm', component:ReactiveFormClassComponent},
     { path: 'availableCourses', component:AvailableCoursesComponent},
+    { path: 'ticket', component:TicketHttpComponent},
+
 ];

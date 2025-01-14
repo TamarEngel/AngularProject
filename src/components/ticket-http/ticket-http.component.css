@@ -1,0 +1,29 @@
+/* עיצוב הקונטיינר של כל Ticket */
+.ticket-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* עיצוב התצוגה של ה-JSON */
+  .json-display {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;  /* מאפשר שברים במסך */
+  }
+  
+  /* עיצוב ההודעה כאשר אין נתונים */
+  .loading-message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+    margin-top: 20px;
+  }
+  

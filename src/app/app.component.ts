@@ -1,10 +1,14 @@
 import { Component } from '@angular/core'
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { TextToIconPipe } from "../pipes/text-to-icon.pipe";
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TextToIconPipe,RouterOutlet,RouterLink, RouterLinkActive],
+  imports: [CommonModule,TextToIconPipe,RouterOutlet,RouterLink, RouterLinkActive,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
