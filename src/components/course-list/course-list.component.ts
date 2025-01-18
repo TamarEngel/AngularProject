@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Course, CourseService } from '../../services/course.service';
+import { Course, CourseService } from '../../services//course/course.service';
 import { Student } from '../../models/student ';
 import { FormsModule } from '@angular/forms';
 import { ColorBtnDirective } from '../../directives/color-btn.directive';

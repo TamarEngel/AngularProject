@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CourseService, CourseSyllabus } from '../../services/course.service';
+import { CourseService, CourseSyllabus } from '../../services/course/course.service'
 import { MatTreeModule, MatTreeNestedDataSource } from '@angular/material/tree';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { MatButtonModule } from '@angular/material/button';

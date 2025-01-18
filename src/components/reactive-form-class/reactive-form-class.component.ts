@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 //import { Class } from '../../models/class';
-import { ClassesService } from '../../services/classes.service';
+import { ClassesService } from '../../services/classes/classes.service';
 import { Class } from '../../models/class';
 
 @Component({

@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 import { Student } from '../../models/student ';
-import { json } from 'stream/consumers';
 
 @Component({
   selector: 'app-student-details',

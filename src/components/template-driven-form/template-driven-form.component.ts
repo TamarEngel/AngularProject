@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Teacher } from '../../models/teacher';
-import { TeacherService } from '../../services/teacher.service';
+import { TeacherService } from '../../services//teacher/teacher.service';
 
 @Component({
   selector: 'app-template-driven-form',

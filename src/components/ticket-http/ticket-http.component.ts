@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TicketsService } from '../../services/tickets.service';
+import { TicketsService } from '../../services//tickets/tickets.service';
 import { AsyncPipe, JsonPipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Ticket } from '../../models/ticket';
