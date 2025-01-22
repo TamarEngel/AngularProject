@@ -8,6 +8,31 @@
         </div>
       </mat-card-content>
     </mat-card>
+
+        <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @for (item of users; track item)
+            {<tr>
+                <td>
+                    {{ item.id }}
+
+                </td>
+                <td>
+                    <a [routerLink]="['/allUsers',item.id]">{{ item.name }}</a>
+                    <!-- <a routerLink="/allUsers/item.id">{{ item.name }}</a> -->
+                </td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
   </div>
 
   

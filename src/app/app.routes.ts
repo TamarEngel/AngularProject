@@ -9,6 +9,7 @@ import { TicketHttpComponent } from '../components/ticket-http/ticket-http.compo
 import { DashboardComponent } from '../components/dashboard/dashboard.component';
 import { SignInComponent } from '../components/sign-in/sign-in.component';
 import { authGuard } from '../guards/auth.guard';
+import { UserDetailsComponent } from '../components/user-details/user-details.component';
 
 export const routes: Routes = [
     { path: '', component:MenuComponent },
@@ -18,5 +19,6 @@ export const routes: Routes = [
     { path: 'availableCourses', component:AvailableCoursesComponent},
     { path: 'ticket', component:TicketHttpComponent},
     { path: 'signIn', component:SignInComponent},
-    { path: 'dashboard', component:DashboardComponent,canActivate:[authGuard]}
+    { path: 'dashboard', component:DashboardComponent,canActivate:[authGuard]},
+    {path: 'allUsers/:userid',component:UserDetailsComponent}
 ];
